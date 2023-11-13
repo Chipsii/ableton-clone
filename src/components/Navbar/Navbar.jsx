@@ -4,6 +4,9 @@ import "./Navbar.scss";
 import { SiAbletonlive } from "react-icons/si";
 
 const Navbar = () => {
+    const handleClick = () => {
+        window.location.href = "/";
+    }
   const [toggleMore, setToggleMore] = useState(false);
   const [toggleMenu, setToggleMenu] = useState(false);
 
@@ -11,7 +14,7 @@ const Navbar = () => {
     <nav className="ableton__navbar nav__padding">
       <div className="ableton__navbar-desktop">
         <div className="desktop-left">
-          <SiAbletonlive href="/" className="logo" />
+          <SiAbletonlive className="logo" onClick={handleClick} />
           <a href="/">Live</a>
           <a href="/">Push</a>
           <a href="/">Link</a>
